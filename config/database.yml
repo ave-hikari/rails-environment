@@ -50,6 +50,5 @@ test:
 production:
   <<: *default
   adapter: postgresql
-  database: myapp_production
-  username: root
-  password: 
+  encoding: unicode
+  pool: 5
