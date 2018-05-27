@@ -24,7 +24,7 @@ module SessionsHelper
     # それ以外の場合はcookies[:user_id]からユーザーを取り出す
     elsif (user_id = cookies.signed[:user_id])
       user = User.find_by(id: user_id)
-      if user && user.authenticated?(cookies[:remember_token])
+      if user && user.authenticated?(:remember, cookies[:remember_token])
         # 永続セッションにログインする
         log_in user
         @current_user = user
