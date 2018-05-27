@@ -18,11 +18,10 @@ class UsersController < ApplicationController
   def create
     @user = User.new(user_params)
     if @user.save
-      # ログインする
-      log_in @user
-      # 成功時のみ、2度目以降にはそのページにメッセージを表示しないようにする
-      flash[:success] = "Welcome to the Sample App!"
-      redirect_to @user
+      # ログインさせず、メールから認証させる
+      UserMailer.account_activation(@user).deliver_now
+      flash[:info] = "Please check your email to activate your account."
+      redirect_to root_url
     else
       render 'new'
     end
