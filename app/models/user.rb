@@ -71,6 +71,11 @@ class User < ApplicationRecord
     update_attribute(:remember_digest, nil)
   end
 
+  # パスワード再設定の期限
+  def password_reset_expired?
+    reset_sent_at < 2.hours.ago
+  end
+
   private
 
     # 有効化トークンとダイジェストを作成および代入する
