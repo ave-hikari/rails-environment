@@ -75,6 +75,10 @@ class User < ApplicationRecord
     reset_sent_at < 2.hours.ago
   end
 
+  def feed
+    Micropost.where("user_id = ?", id)
+  end
+
   private
 
     # 有効化トークンとダイジェストを作成および代入する
