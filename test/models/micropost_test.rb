@@ -2,7 +2,7 @@ require 'test_helper'
 
 class MicropostTest < ActiveSupport::TestCase
   def setup
-    @user = users(:hikari)
+    @user = users(:example)
     @micropost = @user.microposts.build(content: "test")
     # 以下と同じ
     # @micropost = Micropost.new(content: "test", user_id: @user.id)
