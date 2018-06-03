@@ -3,8 +3,8 @@ class User < ApplicationRecord
   before_create :create_activation_digest
 
   # 1ユーザにつき複数のmicropostsが存在する
-  has_many :microposts
-  ##before_save { self.email = email.downcase! }
+  # 紐づくuserがdestroyされた時は同時に削除される
+  has_many :microposts, dependent: :destroy
 
   validates :name, presence: true, length: { maximum: 50 }
 
