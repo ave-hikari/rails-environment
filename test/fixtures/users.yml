@@ -5,6 +5,13 @@ hikari:
   activated: true
   activated_at: <%= Time.zone.now %>
 
+example:
+  name: Example User
+  email: example@railstutorial.org
+  password_digest: <%= User.digest('password') %>
+  activated: true
+  activated_at: <%= Time.zone.now %>
+
 archer:
   name: Sterling Archer
   email: duchess@example.gov
