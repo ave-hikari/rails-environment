@@ -5,6 +5,9 @@ class User < ApplicationRecord
   # 1ユーザにつき複数のmicropostsが存在する
   # 紐づくuserがdestroyされた時は同時に削除される
   has_many :microposts, dependent: :destroy
+  # class名を明示的に指定する
+  has_many :active_relationships, class_name:  "Relationship",
+                                  foreign_key: "follower_id", dependent:   :destroy
 
   validates :name, presence: true, length: { maximum: 50 }
 
