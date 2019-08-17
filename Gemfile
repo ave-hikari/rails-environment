@@ -27,6 +27,7 @@ gem 'bootstrap-will_paginate', '1.0.0'
 gem 'sprockets', '>= 3.7.2'
 gem 'rubyzip', '>= 1.2.2'
 gem 'ffi', '>= 1.9.24'
+gem 'railties', '= 5.2.0'
 
 # Use CoffeeScript for .coffee assets and views
 gem 'coffee-rails', '~> 4.2'
