@@ -6,7 +6,7 @@ ruby '2.5.1'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.2.0'
 gem 'mysql2', '>= 0.4.4', '< 0.6.0'
-gem 'bootstrap-sass', '3.3.7'
+gem 'bootstrap-sass', '>= 3.4.1'
 # Use Puma as the app server
 gem 'puma', '~> 3.11'
 # Use SCSS for stylesheets
@@ -24,6 +24,10 @@ gem 'carrierwave',  '1.2.2'
 gem 'mini_magick',  '>= 4.9.4'
 gem 'will_paginate', '3.1.6'
 gem 'bootstrap-will_paginate', '1.0.0'
+gem 'sprockets', '>= 3.7.2'
+gem 'rubyzip', '>= 1.2.2'
+gem 'ffi', '>= 1.9.24'
+gem 'railties', '= 5.2.0'
 
 # Use CoffeeScript for .coffee assets and views
 gem 'coffee-rails', '~> 4.2'
