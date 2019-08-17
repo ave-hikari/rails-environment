@@ -93,7 +93,7 @@ GEM
     execjs (2.7.0)
     faker (1.7.3)
       i18n (~> 0.5)
-    ffi (1.9.23)
+    ffi (1.11.1)
     fission (0.5.0)
       CFPropertyList (~> 2.2)
     fog (1.42.0)
@@ -416,6 +416,7 @@ DEPENDENCIES
   chromedriver-helper
   coffee-rails (~> 4.2)
   faker (= 1.7.3)
+  ffi (>= 1.9.24)
   fog (= 1.42)
   jbuilder (~> 2.5)
   jquery-rails
